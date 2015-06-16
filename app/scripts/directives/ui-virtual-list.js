@@ -57,7 +57,9 @@ angular.module('virtualListApp')
           scope.uiOnSelect({"option": option});
         };
 
-        scope.init();
+        scope.$watch('uiDataProvider', function () {
+            scope.init();
+        });
       }
     };
   }
